@@ -1,24 +1,38 @@
+let btnDiv = document.getElementById("btnDiv");
 
-function calc() {
+let button = document.createElement("button");
+button.innerText = "Räkna ut";
+btnDiv.append(button);
 
-    const firstNumb = parseInt(document.getElementById("firstNumb").value);
-    const secondNumb = parseInt(document.getElementById("secondNumb").value);
-    const operator = document.getElementById("operators").value;
+let calc = () => {
+  let firstInput = parseInt(document.getElementById("firstInput").value);
+  let secondInput = parseInt(document.getElementById("secondInput").value);
+  let operators = document.getElementById("operators").value;
 
-    switch(operator) {
-        case '+':
-        result = firstNumb + secondNumb;
-        document.getElementById("result").value = firstNumb + secondNumb;
-        break;
+  switch (operators) {
+    case "+":
+      result = firstInput + secondInput;
+      document.getElementById("result").value = firstInput + secondInput;
+      break;
 
-        case '-':
-        result = firstNumb - secondNumb;
-        document.getElementById("result").value = firstNumb - secondNumb;
-        break;
+    case "-":
+      result = firstInput - secondInput;
+      document.getElementById("result").value = firstInput - secondInput;
+      break;
 
-        case '*':
-        result = firstNumb * secondNumb;
-        document.getElementById("result").value = firstNumb * secondNumb;
-        break;
-    }
-} 
+    case "*":
+      result = firstInput * secondInput;
+      document.getElementById("result").value = firstInput * secondInput;
+      break;
+  }
+};
+
+button.addEventListener("click", calc);
+
+let reloadButton = document.getElementById("reloadBtn");
+
+let reload = () => {
+  location.reload();
+};
+
+reloadButton.addEventListener("click", reload);

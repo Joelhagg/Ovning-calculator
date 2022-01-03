@@ -5,41 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
-    <div>
-        <h1>Kalkylator</h1>
-    </div>
-    <div id="inputOne">
-        <p>Första siffran</p>
-        <input type="number" id="firstNumb"/>
-    </div>
-    <div>
-
-        <p>Andra siffran</p>
-       <input type="number" id="secondNumb"/> 
-    </div>
-
-    <div>
-        <form id="form">
-            <label>Välj räknesätt:</label>
-            <select id="operators">
-              <option value="+">+</option>
-              <option value="-">-</option>
-              <option value="*">*</option>
-            </select>
-          </form>
-        
-    </div>
-    <div>
-        <button onclick="calc();"id="btn">Tryck på mej för att räkna ut!</button>
-    </div>
-    <div>
-        <p>Resultatet:</p>
-        <input id="result">
-    </div>
+    <h1>Miniräknare</h1>
+    <p>Första talet</p>
+    <input id="firstInput">
+    <p>Räknesätt</p>
+    <select id="operators">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+    </select>
+    <br>
+    <p>Andra talet</p>
+    <input id="secondInput">
+    <br>
+    <br>
+    <br>
+    <div id="btnDiv"></div>
+    <br>
+    <p>Summa</p>
+    <input id="result">
+    <br>
+    <br>
+    <button id="reloadBtn">Radera</button>
     
     
     <script src="script.js"></script>
